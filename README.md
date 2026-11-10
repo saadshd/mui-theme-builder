@@ -92,6 +92,23 @@ Customize palette, typography, and shape — preview live, export production-rea
 - Fully responsive — works on mobile
 
 ---
+## Work With Me
+
+This tool is built and maintained by [Saad](https://saadshd.vercel.app/), a freelance React developer. If you need help beyond what the builder can do, I am available for:
+
+- Custom MUI themes and design systems
+- React apps and dashboards built on Material UI
+- Migrating an existing app to a new or tweaked theme
+
+**How to get in touch**
+
+- Click **Hire me** in the toolbar, then choose **View portfolio** or **Email me**
+- Or press `Ctrl+K` and search for "hire"
+- Or visit the [portfolio](https://saadshd.vercel.app/) directly
+
+For bugs and feature requests, please use the issue tracker below instead.
+
+---
 
 ## Reporting Issues & Feature Requests
 
