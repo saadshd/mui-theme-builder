@@ -44,6 +44,7 @@ Customize palette, typography, and shape — preview live, export production-rea
 - **10 page templates** — switch between Dashboard, Landing, Blog, Auth (sign in/up), Settings, Kanban, Analytics, Inbox, Social feed, and Pricing from the layers icon in the preview toolbar; each template uses your full theme live
 - Full e-commerce dashboard driven entirely by your theme
 - Device modes — Mobile (390px), Tablet (768px), Desktop (full width)
+- **Landscape orientation** — toggle Mobile and Tablet frames between portrait and landscape
 - Realistic device frames with dynamic island, status bar, volume buttons
 - **Color blindness simulation** — preview your theme as seen with protanopia, deuteranopia, tritanopia, or achromatopsia; toggle from the eye icon in the preview toolbar
 
@@ -52,14 +53,18 @@ Customize palette, typography, and shape — preview live, export production-rea
 - 35 interactive MUI component demos — Inputs, Data Display, Feedback, Navigation
 - Every demo renders inside your live theme instantly
 - Search, pin, and deep-link to any component
+- **"Themed" badge** — cards whose appearance actually differs from the MUI defaults are flagged, so you can spot what your edits touched
+- **"What uses this?"** — a crosshair icon next to each color role, Typography, Border Radius, and Spacing control jumps straight to the Components tab and highlights every component that token affects
 - Component overrides editor coming soon — set default props per component directly from the UI
 
-### Export
+### Export / Import
 
 - 10+ export formats — JS, TS, JSX, Styled Components, Emotion, CSS Variables,
   Tailwind config, Figma Tokens, and more
 - Monaco editor with syntax highlighting
 - Copy to clipboard or download as file
+- **Code size indicator** — the export toolbar shows the line count and size of the generated code (e.g. "~42 lines · 1.2 KB")
+- **Import from JSON**: paste any `createTheme()` config into a live JSON editor with inline syntax highlighting and error/warning detection; partial color overrides (e.g. just `primary.light`) merge with sensible defaults instead of requiring a full color object, missing fields elsewhere fall back automatically so your editor stays fully populated, and extra keys like `components`, `transitions`, and `zIndex` are preserved and passed through all exports unchanged
 
 ### Other
 
@@ -70,6 +75,7 @@ Customize palette, typography, and shape — preview live, export production-rea
 - **Change log** — the Changes tab in the bookmark drawer lists every token edited this session with old → new values and color swatches; clears on page refresh
 - **Share via URL** — click the link icon in the toolbar to copy a shareable URL that encodes your entire theme; opening the link restores the exact theme instantly
 - **Token search** — search bar at the top of the editor panel; type any token name, path, or value (e.g. "primary", "border", "#1976") to instantly filter all ~150 theme tokens across palette, typography, and shape; click a result to jump to that editor tab
+- **Tips popover** — the help icon in the toolbar lists quick tips for getting the most out of the builder
 - **Command palette** — `Ctrl+K` opens a searchable palette to jump to any editor section, switch device/preview mode, load a saved theme, or trigger any action
 - **Keyboard shortcuts** — press `?` to open the shortcuts panel; highlights include:
   - `D` — toggle dark/light mode
@@ -78,6 +84,7 @@ Customize palette, typography, and shape — preview live, export production-rea
   - `F` — toggle full-screen preview (hides the editor panel)
   - `Ctrl+S` — save current theme (saves to active theme if one is set, otherwise opens the bookmark drawer)
   - `Ctrl+E` — open export dialog
+  - `Ctrl+Alt+C` — copy theme as JSON directly to the clipboard
   - `Ctrl+Z` / `Ctrl+Y` — undo / redo
   - `/` — focus component search
 - Export badge — a dot on the export button signals when your theme has unsaved changes
@@ -97,19 +104,14 @@ Please include:
 - For features: what you want and why it would be useful
 
 ---
-
 ## Roadmap
 
-Active development is ongoing. Follow this repo to get notified of updates.
+Active development is ongoing. Follow this repo (Watch → Custom → Issues) to get notified of updates.
 
 **Coming soon:**
 
-- **Custom width input** — type any pixel value to preview your theme at that exact viewport width
-- **Landscape orientation toggle** — rotate the mobile / tablet device frame 90° to test landscape layouts
 - **Custom JSX slot** — paste your own component and preview it live inside `ThemeProvider` with your active theme
 - **Component overrides panel** — per-component defaults editor (Button variant, TextField variant, Card elevation, and more) as a dedicated tab in the editor panel
-- **"Affected by your theme" badge** — highlights which component demos are visually changed by your current theme settings
-- **"What uses this token?"** — click any token in the editor to see which components it affects, highlighted live in the preview
 - **Right-click to edit** — right-click any element in the preview to jump directly to the token that controls it
 
 ---
