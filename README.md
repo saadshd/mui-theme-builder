@@ -22,7 +22,10 @@ Customize palette, typography, and shape — preview live, export production-rea
 - **Generate palette from brand color** — pick a single hex (or use the color picker) to instantly generate all 6 semantic roles using color theory; contrastText is always WCAG-safe
 - **Color harmony panel** — derives complementary, analogous, triadic, and split-complementary palettes from your primary color; apply any suggestion with one click
 - **WCAG contrast badge** on each semantic color — shows the contrast ratio between `main` and `contrastText`, colored green (AA/AAA pass), amber, or red; includes a one-click fix button to set the highest-contrast text color automatically
-- **WCAG accessibility report** — full modal listing every foreground/background pair (semantic colors + text-on-background combinations) scored with AA and AAA chips; per-row fix buttons and a "Fix all" button auto-correct failing pairs without creating circular conflicts
+- **WCAG accessibility report** — full modal listing every foreground/background pair (semantic colors, their light and dark shades, and text-on-background combinations) scored with AA and AAA chips; per-row fix buttons and a "Fix all" button auto-correct failing pairs without creating circular conflicts
+- **Failing-pair badge** on the report icon: shows how many color pairs currently fail AA without opening the report
+- **Eyedropper**: pick a color from anywhere on your screen (other tabs, apps, logos) straight from the color picker or the brand color field. Available in Chrome and Edge; hidden in browsers without the EyeDropper API
+- **Contrast matrix**: a "Matrix" tab in the WCAG report shows every semantic color and text color against your default and paper backgrounds in one table, with contrast ratios and AA/AAA results
 - **Gradient backgrounds** — toggle any background (default or paper) between solid color and gradient; inline editor with angle presets (0°–270°), custom angle input, and independent color pickers for each stop; preview and all Paper/Card/Dialog components reflect the gradient live
 - **Saved swatches library** — bookmark icon inside any color picker saves that color to a persistent library (up to 20); saved swatches appear in every picker below "recently used" with hover-to-delete; shared across all color fields and sessions
 
@@ -32,11 +35,19 @@ Customize palette, typography, and shape — preview live, export production-rea
 - Set a separate **heading font** (h1–h6) independent of the body font
 - Control base font size and per-variant styles (size, weight, line height, letter spacing)
 - Live font preview panel — shows heading and body fonts side by side when both are set
+- **Font pairing suggestions** — chips under each font field suggest complementary heading and body fonts; one click applies them
+- **System font stack presets** — System UI, Serif, Mono, and Humanist chips apply a font stack with no network request
+- **Type scale ruler** — all 13 variants stacked at their real size with your own sample text; click a row to jump to its controls
 
 ### Shape & Spacing
 
 - Global border radius with Sharp / Default / Rounded / Pill presets
-- Spacing unit slider
+- Spacing unit slider with Dense / Comfortable / Spacious presets and a spacing scale preview
+- **Per-component radius** — Button, Card, Chip, TextField, and Dialog each get their own radius slider
+- **Breakpoint editor** — change the xs / sm / md / lg / xl thresholds
+- **Shadows** — a global intensity slider, a shadow color picker, presets (Flat, Default, Deep, Colored), and a preview of all 25 elevation levels
+- **Motion editor** in the Layout tab: tune the seven transition durations and four easing curves, try them in a live preview, and reset any value; only the values you change are exported
+- **Z-index scale** in the Layout tab: edit all eight MUI layers (app bar, drawer, modal, snackbar, tooltip and more), see the stacking order live, and reset any value; only the values you change are exported
 - Live shape preview
 
 ### Live Preview
@@ -45,6 +56,8 @@ Customize palette, typography, and shape — preview live, export production-rea
 - Full e-commerce dashboard driven entirely by your theme
 - Device modes — Mobile (390px), Tablet (768px), Desktop (full width)
 - **Landscape orientation** — toggle Mobile and Tablet frames between portrait and landscape
+- **Zoom, full screen, and screenshot** — zoom the preview from 50% to 125%, open it full screen (`Esc` to exit), or save it as a PNG
+- **Collapsible editor panel** — hide the editor to give the preview the full width; the panel width and collapsed state are remembered
 - Realistic device frames with dynamic island, status bar, volume buttons
 - **Color blindness simulation** — preview your theme as seen with protanopia, deuteranopia, tritanopia, or achromatopsia; toggle from the eye icon in the preview toolbar
 
@@ -74,8 +87,9 @@ Customize palette, typography, and shape — preview live, export production-rea
 - **Checkpoints** — save quick snapshots of your current state and restore any of them later (up to 15, newest first); accessible from the Checkpoints tab in the bookmark drawer
 - **Change log** — the Changes tab in the bookmark drawer lists every token edited this session with old → new values and color swatches; clears on page refresh
 - **Share via URL** — click the link icon in the toolbar to copy a shareable URL that encodes your entire theme; opening the link restores the exact theme instantly
-- **Token search** — search bar at the top of the editor panel; type any token name, path, or value (e.g. "primary", "border", "#1976") to instantly filter all ~150 theme tokens across palette, typography, and shape; click a result to jump to that editor tab
+- **Token search** — search bar at the top of the editor panel; type any token name, path, or value (e.g. "primary", "border", "#1976") to instantly filter all ~150 theme tokens across palette, typography, shape, and layout; click a result to jump to that editor tab
 - **Tips popover** — the help icon in the toolbar lists quick tips for getting the most out of the builder
+- **Token coverage report**: the checklist button next to the token search compares your theme with the MUI defaults and shows how many tokens you have customised, per group (Palette, Typography, Shape, Layout), with each token's default and current value; click a row to jump to it. Breakpoints, shadows and per-component radius are now searchable tokens too
 - **Command palette** — `Ctrl+K` opens a searchable palette to jump to any editor section, switch device/preview mode, load a saved theme, or trigger any action
 - **Keyboard shortcuts** — press `?` to open the shortcuts panel; highlights include:
   - `D` — toggle dark/light mode
@@ -92,6 +106,7 @@ Customize palette, typography, and shape — preview live, export production-rea
 - Fully responsive — works on mobile
 
 ---
+
 ## Work With Me
 
 This tool is built and maintained by [Saad](https://saadshd.vercel.app/), a freelance React developer. If you need help beyond what the builder can do, I am available for:
@@ -121,6 +136,7 @@ Please include:
 - For features: what you want and why it would be useful
 
 ---
+
 ## Roadmap
 
 Active development is ongoing. Follow this repo (Watch → Custom → Issues) to get notified of updates.
