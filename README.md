@@ -88,7 +88,8 @@ Customize palette, typography, and shape — preview live, export production-rea
 - **Change log** — the Changes tab in the bookmark drawer lists every token edited this session with old → new values and color swatches; clears on page refresh
 - **Share via URL** — click the link icon in the toolbar to copy a shareable URL that encodes your entire theme; opening the link restores the exact theme instantly
 - **Token search** — search bar at the top of the editor panel; type any token name, path, or value (e.g. "primary", "border", "#1976") to instantly filter all ~150 theme tokens across palette, typography, shape, and layout; click a result to jump to that editor tab
-- **Tips popover** — the help icon in the toolbar lists quick tips for getting the most out of the builder
+- **Tips popover** — the help icon in the toolbar lists quick tips for getting the most out of the builder, and links to the guides
+- **Guides**: [MUI color palette generator](https://mui-theme-builder.vercel.app/mui-color-palette-generator/) explains how to get a full palette from one brand color, and [How to create a custom MUI theme](https://mui-theme-builder.vercel.app/guides/custom-mui-theme/) walks through `createTheme` step by step with code
 - **Token coverage report**: the checklist button next to the token search compares your theme with the MUI defaults and shows how many tokens you have customised, per group (Palette, Typography, Shape, Layout), with each token's default and current value; click a row to jump to it. Breakpoints, shadows and per-component radius are now searchable tokens too
 - **Command palette** — `Ctrl+K` opens a searchable palette to jump to any editor section, switch device/preview mode, load a saved theme, or trigger any action
 - **Keyboard shortcuts** — press `?` to open the shortcuts panel; highlights include:
